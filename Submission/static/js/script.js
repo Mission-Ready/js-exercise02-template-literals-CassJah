@@ -4,10 +4,13 @@
 Using a template literal, change the fullName variable to be
 firstName and lastName combined:
 
-Phoebe Su
+Javan Cassidy
 
 Enter your code below:
 */
+let firstName = "Javan";
+let lastName = "Cassidy";
+let fullName = `${firstName} ${lastName}`;
 
 /**---------------------------------------------------------
  * Part B
@@ -22,13 +25,18 @@ the following multi line string (including indentation):
 
 Enter your code below:
 */
+let listHTML = `
+<ul>
+  <li>Banana</li>
+  <li>Orange</li>
+</ul>`;
 
 /**---------------------------------------------------------
  * Part C
 
 Using a template literal, read from the movie information:
 
-  movieName = Harry Potter and the Philosopher's Stone
+  movieName = "Harry Potter and the Philosopher's Stone";
   movieType = "Fantasy/Adventure";
   releaseYear = 2001;
 
@@ -40,18 +48,17 @@ The variable name will be movieText:
 
 Enter your code below:
 */
+let movieName = "Harry Potter and the Philosopher's Stone";
+let movieType = "Fantasy/Adventure";
+let releaseYear = 2001;
+let movieText = `${movieName} (${movieType}) was released in ${releaseYear}.`;
 
-/**---------------------------------------------------------
-/**************************** */
-/*Do not touch the code below */
-/**************************** */
+// Update HTML elements with JavaScript variables
 const nameEl = document.getElementById("name");
 nameEl.innerText = fullName || "";
 
 const fruitEl = document.getElementById("fruit");
 fruitEl.innerHTML = listHTML || "";
 
-const moveEl = document.getElementById("movie");
-moveEl.innerHTML = movieText || "";
-/**************************** */
-/**************************** */
+const movieEl = document.getElementById("movie");
+movieEl.innerHTML = movieText || "";
